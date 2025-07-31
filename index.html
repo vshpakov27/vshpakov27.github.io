@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f9;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .chart-container {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather Dashboard (55.0718472, 29.5065049)</h1>
+  <div class="dashboard">
+    <div class="chart-container">
+      <h2>Min Temperature (Last 2 Weeks)</h2>
+      <canvas id="minTempChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Forecast Temperature (Next Week)</h2>
+      <canvas id="forecastTempChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Humidity (Last 2 Weeks)</h2>
+      <canvas id="humidityPastChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Humidity (Next 2 Weeks)</h2>
+      <canvas id="humidityForecastChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Wind Forecast (Next Week)</h2>
+      <canvas id="windChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Avg Historical Temp (Next Week)</h2>
+      <canvas id="avgTempChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
